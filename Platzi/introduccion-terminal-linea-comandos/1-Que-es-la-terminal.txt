@@ -22,6 +22,11 @@ COMANDOS:
 - ls: listar nuestro sistema de archivos o la carpeta en que estamos.
 - ls -l: funciona igual a ls pero muestra informacion mas detallada de cada uno de los ficheros.
 - ls -lh: es lo mismo que ls -l, solo que en este la informacion se presenta mas amigable para ser leida por humanos.
+- ls -la: nos lista absolutamente todos los archivos que tenga un directorio incluyendo aquellos que se ecuentren como ocultos (los archivos ocultos se presentan con un . antes del nombre )
+- ls -lS: lista los elementos de un directorio y los ordena por peso.
+- ls -lr: lista los elementos de forma invertida, usualmente suele ordenar en orden alfabetico.
+- tree: despliega todos los directorios como si fuese un arbol.
+- tree -L 2: es igual a tree pero aqui le indicamos que solo profundice en dos niveles
 - cd( change directory ): necesita recibir un parametro que es la ruta o espacio a deonde debe desplazarse. asi podemos desplazarnos entre carpetas.
 - clear: limpia la terminal.
 - pwd( Print Working Directory ): Nos muestra el directoria o carpeta donde estamos trabajando.
@@ -35,4 +40,32 @@ OPERADORES DE RUTA RELATIVA:
 cd ./documents/cursos
 cd .
 cd ..
+
+
+====== MANIPULACION DE ARCHIVOS Y DIRECTORIOS ======
+
+CREAR DIRECTORIO:
+- mkdir nombreDirectorio
+- mkdir directorio1 directorio2 directorio3 => permite crear varios directorios al mismo tiempo
+
+CREAR UN ARCHIVO: 
+- touch nombreArchivo
+- touch file1 file2 file3 => permite crear varios archivos al mismo tiempo ( en este caso file1 file2 y file3 son archivos independientes.)
+
+COPIAR ARCHIVOS:
+- cp nombreArchivoOriginal nombreArchivoCopia
+
+MOVER ARCHIVOS: 
+- mv nombreArchivo ubicacionDestinoDeLaCopia
+mv file1 .. => este ejemplo mueve file1 una carpeta atras.
+
+con el comando mv tambien es posible cambiar el nombre de un fichero
+mv file1 fileNuevoNombre
+
+REMOVER ARCHIVOS O FICHEROS:
+- rm nombreArchivo
+- rm -i nombreArchivo => la i representa "interactive"
+REMOVER DIRECTORIOS:
+- rm -ri nombreDirectorio  => r es una flag que significa recursive, i es interactiva
+- rm -rm nombreArchivo => f hace alusion a force, es un flag muy peligroso. solo se debe usar si se esta del todo seguro.
 
