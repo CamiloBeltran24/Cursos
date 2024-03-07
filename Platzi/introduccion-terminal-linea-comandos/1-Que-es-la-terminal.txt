@@ -1,0 +1,38 @@
+LA TERMINAL:
+
+Es una interfaz grafica que simula una linea de comandos. Cuando hablamos de una linea de comandos nos referimos a una shell.
+
+- TERMINAL: Ventanita que nos muestra el prompt. Este aloja a la shell.
+- LINEA DE COMANDOS(Shell): Un programa que toma comandos y los pasa al sistema operativo para hacer algo.
+
+ALGUNOS TIPOS DE SHELL:
+
+- Bourne Shell
+- Bash Shell
+- Z Shell
+- C Shell
+- korn Shell
+- Fish Shell
+- PowerShell
+
+UN COMANDO ES: un programa que se puede ejecutar desde la temrinal y este puede recibir algunos parametros y opciones.
+
+COMANDOS:
+
+- ls: listar nuestro sistema de archivos o la carpeta en que estamos.
+- ls -l: funciona igual a ls pero muestra informacion mas detallada de cada uno de los ficheros.
+- ls -lh: es lo mismo que ls -l, solo que en este la informacion se presenta mas amigable para ser leida por humanos.
+- cd( change directory ): necesita recibir un parametro que es la ruta o espacio a deonde debe desplazarse. asi podemos desplazarnos entre carpetas.
+- clear: limpia la terminal.
+- pwd( Print Working Directory ): Nos muestra el directoria o carpeta donde estamos trabajando.
+- file xxxx: file recibe como parametro el nombre del archivo y nos describe el tipo de archivo que le indiquemos.
+
+
+OPERADORES DE RUTA ABSOLUTA:
+cd /home/document/cursos/platzi
+
+OPERADORES DE RUTA RELATIVA:
+cd ./documents/cursos
+cd .
+cd ..
+
