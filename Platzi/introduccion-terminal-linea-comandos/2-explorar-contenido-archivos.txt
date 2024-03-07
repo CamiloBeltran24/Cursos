@@ -1,0 +1,29 @@
+EXPLORAR CONTENIDO DE ARCHIVOS:
+estos comando funcionan para archivos de texto
+
+MOSTRAR LA CABECERA:
+- head nombreArchivo => muestra las primeras 10 lineas de codigo
+- head nombreArchivo -n 15 => muestras las primeras 15 lineas del archivo de texto, el flag -n solo nos permite ingresar el numero de lineas que queremos ver.
+
+
+MOSTRAR FIN DEL DOCUMENTO
+- tail nombreArchivo => muestra las 10 ultimas lineas del archivo
+- tail nombreArchivo -n 20 => muestra las ultimas 20lines de codigo del archivo
+
+MOSTRAR TODO EL DOCUMENTO
+- less nombreArchivo => less muestra todo el contenido del DOCUMENTO
+
+podemos realizar busquedas dentro de un documento luego de visualizarlo con less para ello agregamos:
+/palabraBuscada => esto hara la busqueda a la palabra que deseas.
+
+para salir de less debemos tipear la letra q de quit
+
+ABRIR ARCHIVOS EN EDITOR DE TEXTO PREDETERMINADO:
+MAC: open nombreArchivo
+LINUX: xdg-open nombreArchivo
+
+MATAR UN PROCESO:
+ctrl + C
+
+VER LA INTERFAZ GRAFICA DEL GESTOR DE ARCHIVOS LINUX:
+LINUX: nautilus rutaCarpeta   ------   nautilus Documents/Dev
