@@ -1,0 +1,17 @@
+QUE ES UN COMANDO:
+
+Un comando puede ser 4 cosas
+1- Programa Ejecutable
+2- Un comando de utilidad de la shell ( es una funcion que viene dentro del programa de la shell )
+3- Funcion de shell ( no vienen dentro del programa de la shell )
+4- Un alias
+
+MOSTRAR LA NATURALEZA DE UN COMANDO:
+Ejemplos: 
+- type cd 
+- type mkdir
+- type rm
+
+
+CREAR ALIAS
+alias l="ls -lh" => creamos el alias llamado l que ejecuta realmente el comando 
