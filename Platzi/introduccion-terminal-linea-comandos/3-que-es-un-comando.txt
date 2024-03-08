@@ -7,11 +7,22 @@ Un comando puede ser 4 cosas
 4- Un alias
 
 MOSTRAR LA NATURALEZA DE UN COMANDO:
-Ejemplos: 
-- type cd 
+Ejemplos:
+- type cd
 - type mkdir
 - type rm
 
 
 CREAR ALIAS
-alias l="ls -lh" => creamos el alias llamado l que ejecuta realmente el comando 
+alias l="ls -lh" => creamos el alias llamado l que ejecuta realmente el comando ( Los aleas suelen ser temporales, al reiniciar la terminal suelen desaparecer )
+
+
+CONOCER LAS COSAS QUE SE PUEDEN HACER CON UN COMANDO: Este comando puede variar entre shells
+help cd
+help ls
+
+info cd
+info ls
+
+whatis cd
+whatis ls
