@@ -46,3 +46,13 @@ function change( number ) {
 
 console.log(changeTemp( fahrenheit ));
 console.log(changeTemp( tempCollection ));
+
+// SUM OF NUMBERS
+const numsCollection = [20, 15, 56];
+let result = 0;
+
+numsCollection.forEach( number => {
+  result += number;
+})
+
+console.log( result );
