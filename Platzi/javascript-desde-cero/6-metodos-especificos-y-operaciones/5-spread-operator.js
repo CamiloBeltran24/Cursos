@@ -1,3 +1,5 @@
+const mysql = require('mysql');
+
 // 1. Copiar un array.
 
 const originalArray = [ 1, 2, 3, 4, 5 ];
