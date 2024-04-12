@@ -35,5 +35,29 @@ const persona = {
 console.log( persona );
 
 
-console.log( persona.nombre );
-persona.saludar( persona.saludar() );
+console.log( persona.nombre ); // acceder a una propiedad
+persona.saludar( persona.saludar() ); // ejecutar un método
+
+persona.telefono = "123456789"; // agregar una propiedad
+console.log( persona.telefono );
+
+// this
+// agregar un método a un objeto
+persona.despedir = () => {
+  console.log(`Adios mi nombre es ${this.nombre}`);
+};
+console.log( persona.despedir() );
+
+
+console.log( persona.direccion.ciudad );// acceder a una propiedad de un objeto anidado
+
+
+// Borrar una propiedad
+delete persona.telefono; // borra la propiedad telefono
+
+
+// Borrar un método
+delete persona.despedir; // borra el método despedir
+
+console.log( persona );
+
