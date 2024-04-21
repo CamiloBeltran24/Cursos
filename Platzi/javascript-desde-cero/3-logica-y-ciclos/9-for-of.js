@@ -10,13 +10,13 @@ Se utiliza en objetos iterables ( Array, strings );
 
 let list = ["eat", "sleep", "code", "repeat"];
 
-for (const listItem of list) {
+for (const listItem of list) { // for of recorre el array y asigna cada valor a la variable listItem
   console.log(listItem);
 };
 
 
 let canasta = ["Manzana", "Pera", "Naranjas", "Uvas", "lulo"];
 
-for ( const fruta of fruta ) {
+for ( const fruta of canasta ) {
   console.log( fruta );
 }
