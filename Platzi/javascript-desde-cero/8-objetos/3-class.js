@@ -16,3 +16,15 @@ class Persona {
     console.log(`Hola mi nombre es ${this.nombre}`);
   }
 }
+
+const juan = new Persona("Juan", "Perez", 30); // new crea un nuevo objeto a partir de la clase -> Instancia
+console.log( juan );
+
+juan.saludar(); // Ejecutar un método
+
+// Agregar un método a la clase que se comparta entre todas las instancias
+Persona.prototype.despedir = function() {
+  console.log(`Adios mi nombre es ${this.nombre} ${this.apellido}`);
+};
+
+juan.despedir(); // Ejecutar un método desde la instancia juan
