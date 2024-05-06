@@ -1,0 +1,35 @@
+PARADIGMAS
+
+los paradigmas son formas, camino o lineamientos que podemos seguir para
+programar nuestras aplicaciones.
+
+
+paradigmas populares:
+  - Estructurado
+  - Orientado a Objetos
+  - Funcional
+
+Cada paradigma surge como solucion a un paradigma anterior, el que un paradigma sea nuevo no
+quiero decir que sea mejor que otro.
+
+No todos los lenguajes de programacion nos permiten trabajar con todos los paradigmas.
+Hay lenguajes que nos permiten trabajar con varios paradigmas
+
+
+La programacion orientada a objetos nos ayuda a reutilizar codigo.
+
+Javascript no esta basado en objetos, esta basado en prototipos.
+
+es decir que todo en javascript son prototipos.
+
+
+Clase: Representación de métodos y atributos que representan a una entidad.
+
+Objeto: Instancia de una clase.
+
+Herencia: Crear nuevas clases con características similares a partir de otras.
+
+Encapsulamiento: Esconder datos que solo pueden ser accedidos por la clase.
+
+Polimorfismo: Un objeto puede comportarse de muchas formas, ejemplo: En herencia, las clases hijas pueden comportarse como su clase padre y viceversa.
+
