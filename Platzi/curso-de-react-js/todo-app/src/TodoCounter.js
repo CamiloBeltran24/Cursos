@@ -5,9 +5,9 @@ const estilos = {
   color: 'red',
   padding: '48px',
 }
-function TodoCounter( props ){
+function TodoCounter( { completed, total } ){
   return(
-    <h1 style={estilos}>Has Completado { props.completed } de { props.total } TODOs</h1>
+    <h1 style={estilos}>Has Completado { completed } de { total } TODOs</h1>
   );
 }
 

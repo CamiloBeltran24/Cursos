@@ -1,8 +1,9 @@
-
+import { TodoTop } from './TodoTop';
 import { TodoCounter }  from './TodoCounter';
 import { TodoSearch } from './TodoSearch';
 import { TodoList } from './TodoList';
 import { TodoItem } from './TodoItem';
+import { CreateTodoButton } from './CreateTodoButton';
 import './App.css';
 import React from 'react';
 
@@ -21,24 +22,51 @@ const defaultTodos = [
   },
   {
     text: "Jugar Una hora",
-    completed: false,
+    completed: true,
+  },
+  {
+    text: "Cocinar la cena",
+    completed: true,
   }
 ];
 
 function App() {
+
+  const [ todos, setTodos ] = React.useState( defaultTodos );
+  const [ searchValue, setSearchValue ] = React.useState('') // Uso de use state
+  
+  const completedTodos = todos.filter(( todo ) => todo.completed == true).length
+  console.log(`Los usuarios buscan TODOs de: ${searchValue}`);
+
+
+  const todosToShow = todos.filter(( todo ) => todo.text.includes(searchValue))
+
+  console.log(todosToShow);
+
   return (
     <React.Fragment>
 
-      <TodoCounter completed={2} total={5} /> { /* De esta manera se agregan componentes dentro de componentes. */}
+      <TodoTop />
 
-      <TodoSearch /> { /* componentes de etiqueta de auto cierre */}
+      <TodoCounter
+        completed={completedTodos}
+        total={todos.length}  /> { /* De esta manera se agregan componentes dentro de componentes. */}
+
+      <TodoSearch
+        searchValue={searchValue}
+        setSearchValue={setSearchValue}
+      /> { /* componentes de etiqueta de auto cierre */}
 
       { /* Etiquetas de componentes con apertura y cierre */}
-      <TodoList>
-        {defaultTodos.map( todo => (
+      <TodoList 
+      setTodos={setTodos} items={todosToShow}>
+        {todos.map( todo => (
           <TodoItem key={todo.text} text={todo.text} completed={todo.completed}/>
-        ))}
+        )) }
       </TodoList>
+
+      <CreateTodoButton/>
+
     </React.Fragment>
   );
 }

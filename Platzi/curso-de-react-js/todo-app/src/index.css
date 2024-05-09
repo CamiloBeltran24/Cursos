@@ -17,3 +17,11 @@ code {
   padding: 0;
   box-sizing: border-box;
 }
+
+#root {
+  /* padding: 0 30px; */
+}
+
+.header{
+  background-color: #5A5B9F;
+}
