@@ -1,13 +1,16 @@
 const estilos = {
   fontWeight: 500,
-  fontSize: '24px',
+  fontSize: '22px',
   textAlign: 'center',
-  color: 'red',
-  padding: '48px',
+  color: '#fff',
+  margin: '0',
+  fontWeight: '400'
 }
 function TodoCounter( { completed, total } ){
   return(
-    <h1 style={estilos}>Has Completado { completed } de { total } TODOs</h1>
+    <div className="counter">
+      <h1 style={estilos}>Has Completado { completed } de { total } TODOs</h1>
+    </div>
   );
 }
 

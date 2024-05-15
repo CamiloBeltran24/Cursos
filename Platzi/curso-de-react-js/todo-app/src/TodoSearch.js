@@ -5,16 +5,19 @@ function TodoSearch({ searchValue, setSearchValue }){
 
  
   return(
-    <input 
-      type="text"
-      placeholder="Preparar la cena"
-      value={searchValue} // el  value debe ser el estado
-      onChange={
-        (event) => {
-          // console.log(event.target.value);
-          setSearchValue(event.target.value) // Esta linea actualiza el estado en useState
-        }
-      } />
+    <section className="search_container">
+      <input 
+        type="text"
+        placeholder="Preparar la cena"
+        value={searchValue} // el  value debe ser el estado
+        onChange={
+          (event) => {
+            // console.log(event.target.value);
+            setSearchValue(event.target.value) // Esta linea actualiza el estado en useState
+          }
+        } />
+        <div className="searchIcon"></div>
+      </section>
   );
 }
 

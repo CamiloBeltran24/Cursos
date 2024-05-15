@@ -1,9 +1,12 @@
 function TodoItem({ text, completed }) {
   return(
     <li>
-      <span className={`Icon Icon-check ${ completed ? 'Icon-check--completed' : ''} `}>V</span>
+      <span
+        className={`Icon Icon-check ${ completed ? 'Icon-check--completed' : ''} `}
+        onClick={}
+      >V</span>
       <p>{ text }</p>
-      <span>X</span>
+      <span className={`Icon Icon-delete`}>X</span>
     </li>
   );
 }

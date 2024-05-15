@@ -1,12 +1,15 @@
 const STYLES = {
-  backgroundColor: 'red',
-  padding: '10px 15px',
-  borderRadius: '10px',
+  backgroundColor: 'rgba(64, 68, 201)',
+  padding: '10px 18px',
+  borderRadius: '18px',
   color: '#fff',
   fontSize: '22px',
   border: 'none',
   outline: 'none',
-  cursor: 'pointer'
+  cursor: 'pointer',
+  position: 'fixed',
+  bottom: '20px',
+  right: '20px',
 }
 
 

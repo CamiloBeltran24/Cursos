@@ -4,6 +4,7 @@ import { TodoSearch } from './TodoSearch';
 import { TodoList } from './TodoList';
 import { TodoItem } from './TodoItem';
 import { CreateTodoButton } from './CreateTodoButton';
+import { TodoContent } from './TodoContent';
 import './App.css';
 import React from 'react';
 
@@ -35,13 +36,14 @@ function App() {
   const [ todos, setTodos ] = React.useState( defaultTodos );
   const [ searchValue, setSearchValue ] = React.useState('') // Uso de use state
   
-  const completedTodos = todos.filter(( todo ) => todo.completed == true).length
-  console.log(`Los usuarios buscan TODOs de: ${searchValue}`);
+  // ESTODOS DERIVADOS
+  const completedTodos = todos.filter(( todo ) => todo.completed === true).length
+  // console.log(`Los usuarios buscan TODOs de: ${searchValue}`);
+  const todosToShow = todos.filter(( todo ) => todo.text.includes(searchValue));
+  // Validacion para la busqueda de coincidencias del teclado
+  const searchedTodos = todos.filter( (todo) => todo.text.toLowerCase().includes(searchValue.toLocaleLowerCase()));
 
-
-  const todosToShow = todos.filter(( todo ) => todo.text.includes(searchValue))
-
-  console.log(todosToShow);
+  // console.log(todosToShow);
 
   return (
     <React.Fragment>
@@ -52,18 +54,27 @@ function App() {
         completed={completedTodos}
         total={todos.length}  /> { /* De esta manera se agregan componentes dentro de componentes. */}
 
-      <TodoSearch
-        searchValue={searchValue}
-        setSearchValue={setSearchValue}
-      /> { /* componentes de etiqueta de auto cierre */}
+        <TodoContent>
+          <TodoSearch
+            searchValue={searchValue}
+            setSearchValue={setSearchValue}
+          /> { /* componentes de etiqueta de auto cierre */}
+
+          <TodoList
+          setTodos={setTodos}
+          items={todosToShow}
+          >
+            {searchedTodos.map( todo => (
+              <TodoItem
+                key={todo.text}
+                text={todo.text}
+                completed={todo.completed}/>
+            )) }
+          </TodoList>
+
+        </TodoContent>
 
       { /* Etiquetas de componentes con apertura y cierre */}
-      <TodoList 
-      setTodos={setTodos} items={todosToShow}>
-        {todos.map( todo => (
-          <TodoItem key={todo.text} text={todo.text} completed={todo.completed}/>
-        )) }
-      </TodoList>
 
       <CreateTodoButton/>
 
