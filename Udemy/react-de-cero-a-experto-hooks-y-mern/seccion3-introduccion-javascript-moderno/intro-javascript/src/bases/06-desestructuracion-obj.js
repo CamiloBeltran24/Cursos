@@ -19,7 +19,7 @@ const { nombre, edad } = persona;
 //
 const retornaPersona = ( usuario ) => {
     const { edad, nombre, clave } = usuario;
-    console.log( edad, nombre, clave );
+    // console.log( edad, nombre, clave );
 }
 
 retornaPersona( persona );
@@ -49,4 +49,4 @@ const useContext = ({ clave, nombre, edad, rango }) => {
 
 // Extrar obejtos anidados o variables dentro de objetos dentro de otro objeto
 const { nombreClave, anios, latlng:{lat, lng} } = useContext( persona );
-console.log( nombreClave, anios, lat, lng );
+// console.log( nombreClave, anios, lat, lng );

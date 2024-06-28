@@ -9,17 +9,17 @@ console.log( personajes[2] );
 const [ , , p3 ] = personajes; // la coma(,) sola antes de p2 indica que ignore el elemento
 // anterior del arreglo
 
-console.log( p3 );
+// console.log( p3 );
 
 const retornaArreglo = () => {
-    return ['ABC', 123 ];
+    return [ 'ABC', 123 ];
 }
 
-const arr1 = retornaArreglo();
-console.log( arr1 );
+const arr1 = retornaArreglo( );
+// console.log( arr1 );
 
-const [ letras, numeros ] = retornaArreglo();
-console.log( letras, numeros );
+const [ letras, numeros ] = retornaArreglo( );
+// console.log( letras, numeros );
 
 
 //
@@ -31,5 +31,5 @@ const useState = ( valor ) => {
 // console.log( arr );
 
 const [ nombre, setNombre ] = useState( 'Goku' );
-console.log( nombre );
+// console.log( nombre );
 setNombre();
