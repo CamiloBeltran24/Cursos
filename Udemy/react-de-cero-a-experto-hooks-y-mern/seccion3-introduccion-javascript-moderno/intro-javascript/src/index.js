@@ -1,1 +1,2 @@
-// ASYNC - AWAY
+// Operador Ternario
+
