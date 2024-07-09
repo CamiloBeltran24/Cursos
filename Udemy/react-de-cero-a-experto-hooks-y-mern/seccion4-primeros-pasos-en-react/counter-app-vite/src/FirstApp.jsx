@@ -1,3 +1,7 @@
+// para importar las proptypes
+// las proptypes ya vienen instalas de create-react-app pero no en vite
+import propTypes from 'prop-types';
+
 // Para retornar mas de un elemento HTML podemos encapsular esos elementos HTML dentro
 // de la etiqueta React.Fragment o en su debido caso la sintaxis <></>
 
@@ -45,4 +49,13 @@ export const FirstApp = ( { title, subTitle } ) => {
             <p>{ subTitle + 1 }</p>
         </>
     )
+}
+
+
+// Utilizar Prop-types
+// las proptypes nos ayudan a definir el tipo de dato que estamos esperando en la prop-types
+// podemos tambien definir si un proptype es requerido o obligatorio.
+FirstApp.propTypes = {
+    title: propTypes.string.isRequired,
+    subTitle: propTypes.string.isRequired
 }
