@@ -22,19 +22,27 @@ const JsonMessage = {
     title: 'Christian Camilo'
 }
 
-// para colocar varaibles dentro de react se usa la sintaxis {} y dentro de ellos 
-// cualquier tipo de expresion JS excepto un objeto, no podemos enviar objetos
 
-export const FirstApp = () => {
+
+export const FirstApp = ( { title, subTitle } ) => {
+
+    // console.log( props );
+
     return (
         <>
+            {/* // para colocar varaibles dentro de react se usa la sintaxis {} y dentro de ellos
+            // cualquier tipo de expresion JS excepto un objeto, no podemos enviar objetos */}
+
             {/* Colocar el valor de retorno de una funcion */}
-            <h1> { greeting(JsonMessage.title) } </h1>
-            <h2> { newMessage } </h2>
+            {/* <h1> { greeting(JsonMessage.title) } </h1> */}
+            {/* <h2> { newMessage } </h2> */}
             {/* Podemos enviar atributos de un objeto pero no el objeto en si. */}
-            <p> { JsonMessage.message } { JsonMessage.title } </p>
+            {/* <p> { JsonMessage.message } { JsonMessage.title } </p> */}
             {/* Para insertar el objeto como un string */}
-            <p> { JSON.stringify( JsonMessage ) }</p>
+            {/* <p> { JSON.stringify( JsonMessage ) }</p> */}
+
+            <h1>{ title }</h1>
+            <p>{ subTitle + 1 }</p>
         </>
     )
 }
