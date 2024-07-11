@@ -1,25 +1,40 @@
 import React from 'react';
 import propTypes from 'prop-types';
+import { useState } from 'react';
 
 
 
+export const CounterApp = ({ value = 1 }) => {
 
-export const CounterApp = ({ value = 'No hay value' }) => {
-    // Cuanod una funcion recibe como parametro solo un evento podemos omitir el envio del 
-    // evento desde el llamado a la funcion, en este caso el llamado a la funcion esta en la linea 20
+    const [ currentValue, setCurrentValue ] = useState( value );
+    // Cuanod una funcion recibe como parametro solo un evento podemos omitir el envio del
+    // evento desde el llamado a la funcion, en este caso el llamado a la funcion esta en la linea 22
+
     const handleAdd  = ( event ) => {
-        console.log('+1');
-        value = 1000;
+        setCurrentValue( currentValue + 1 );
+        // setCurrentValue( c => c + 1);
+    }
+
+    const handleSubstract = () => {
+        setCurrentValue( currentValue - 1 );
+    }
+
+    const handleReset = () => {
+        setCurrentValue( value );
     }
 
     return (
         <>
             <h1>CounterApp</h1>
-            <h2>{ value }</h2>
+            <h2>{ currentValue }</h2>
 
             <button onClick={ handleAdd }>
                 +1
             </button>
+            <button onClick={ handleSubstract }>
+                -1
+            </button>
+            <button onClick={ handleReset }>Reset</button>
         </>
     )
 }
