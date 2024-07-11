@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { App } from './App';
 import { HelloWorldApp } from './HelloWorldApp';
 import { FirstApp } from './FirstApp';
+import { CounterApp } from './CounterApp';
 
 import './styles.css';
 
@@ -19,6 +20,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
         {/* <App /> */}
         {/* <HelloWorldApp /> */}
-        <FirstApp title='Hola, Soy Goku!!' subTitle={123}/>
+        {/* <FirstApp /> */}
+        <CounterApp value={10} />
     </React.StrictMode>
 )

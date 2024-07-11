@@ -46,16 +46,27 @@ export const FirstApp = ( { title, subTitle } ) => {
             {/* <p> { JSON.stringify( JsonMessage ) }</p> */}
 
             <h1>{ title }</h1>
-            <p>{ subTitle + 1 }</p>
+            <p>{ subTitle }</p>
         </>
     )
 }
 
 
 // Utilizar Prop-types
+// npm install prop-types
+
 // las proptypes nos ayudan a definir el tipo de dato que estamos esperando en la prop-types
 // podemos tambien definir si un proptype es requerido o obligatorio.
 FirstApp.propTypes = {
     title: propTypes.string.isRequired,
-    subTitle: propTypes.string.isRequired
+    subTitle: propTypes.string
+}
+
+
+// DefaultProps
+
+FirstApp.defaultProps = {
+    title: 'No hay Titulo',
+    subTitle: 'No hay subtitulo',
+    name: 'Christian Beltran'
 }
