@@ -3,7 +3,7 @@ import { getUsuarioActivo } from "../../src/base-pruebas/05-funciones";
 
 
 describe('Esta es la prueba de 05-funciones.js', () => {
-    test('Debe retorar un objeto', () => {
+    test('getUser Debe retorar un objeto', () => {
 
         const testUser = {
             uid: 'ABC123',
@@ -16,6 +16,8 @@ describe('Esta es la prueba de 05-funciones.js', () => {
         expect( testUser ).toEqual( user )
 
     });
+
+
 
     test('getUsuarioActivo Retorna un objeto', () => {
         const name = 'Christian';
