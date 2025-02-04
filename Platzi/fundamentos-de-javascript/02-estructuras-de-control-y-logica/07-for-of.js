@@ -7,7 +7,7 @@
  *  // codigo
  * }
  *
- * un truco para saber si puedes udar for of en un elemento es si al hacerle varaible.length obtienes un numero
+ * un truco para saber si puedes usar for of en un elemento es si al hacerle variable.length obtienes un numero
  *
 */
 

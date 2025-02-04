@@ -19,8 +19,8 @@ function outerFunction (){
 }
 
 const clousureExample = outerFunction();
-console.log( clousureExample );
-console.log( clousureExample() );
+console.log( clousureExample ); // Imprime la funcion
+console.log( clousureExample() ); // Imprime el resultado de la ejecucion de la funcion
 
 // =========================
 
