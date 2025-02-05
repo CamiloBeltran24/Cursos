@@ -15,7 +15,7 @@ console.log(numerosMayoresDeDiez);
  */
 
 const arregloDeNumeros = [2,4,8,10,12];
-const sum = arregloDeNumeros.reduce( (accumulator, currentValue) => accumulator + currentValue, 0); // el ultimo numero es el valor inicial del "contador"
+const sum = arregloDeNumeros.reduce( (accumulator, currentValue) => accumulator + currentValue, 0); // el ultimo numero es el valor inicial del "contador" -> 0
 console.log(sum);
 
 const palabras = ['Apple', 'Banana', 'Hello', 'Bye', 'Apple', 'Yellow', 'Bye', 'Apple', 'Banana', 'Apple','Bye','Yellow'];
