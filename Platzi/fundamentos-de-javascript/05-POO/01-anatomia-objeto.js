@@ -20,10 +20,9 @@ const persona = {
     anoNacimiento: 1993,
     direccion: {
         calle: 'Calle 129 #54-07',
-        ciudad: 'Bogota'
+        ciudad: 'Bogota',
     },
-    saludar(){
+    saludar() {
         console.log(`Hola mi nombre es ${this.nombre}`);
-        
-    }
-}
+    },
+};

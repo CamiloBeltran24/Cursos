@@ -20,12 +20,12 @@ const persona = {
     anoNacimiento: 1993,
     direccion: {
         calle: 'Calle 129 #54-07',
-        ciudad: 'Bogota'
+        ciudad: 'Bogota',
     },
-    saludar(){
+    saludar() {
         console.log(`Hola, mi nombre es ${this.nombre}`);
-    }
-}
+    },
+};
 
 persona.saludar();
 
@@ -35,10 +35,9 @@ persona.telefono = '317-589-1597';
 console.log(persona);
 console.log(persona.telefono);
 
-
 //Agregar nuevo metodo
 persona.despedir = () => {
-    console.log("Adios");
+    console.log('Adios');
 };
 
 persona.despedir();
@@ -46,4 +45,3 @@ persona.despedir();
 //Eliminar metodo y propiedad
 delete persona.telefono;
 delete persona.despedir;
-
